@@ -19,11 +19,7 @@ module.exports = {
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",
-    "no-unused-vars": ["error", {
-      "argsIgnorePattern": "next",
-      "vars": "all", "args": "after-used",
-      "argsIgnorePattern": "^_",
-      "argsIgnorePattern": "_"
-     }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "import/no-named-as-default": 0,
   },
 };
