@@ -35,8 +35,7 @@
     "react-app-rewired": "^2.1.5"
   }
 ```
-
-
+![alt text](https://github.com/andrelinos/SemanaOmniStack-7.0/blob/master/frontend/screenshot/instarocket.png "Semana OmniStack 7.0")
 
 
 # TODO
@@ -122,7 +121,7 @@ Nota: Para executar os projetos, você precisa estar dentro da pasta do projeto
 - 1. Adicione uma nova requisição POST
 - 2. Coloque a URL http://localhost:3333/posts/id/like
    (ex: /posts/5e82a083070c5f571f26cf96/like)
-   
+
 Nota: O id, se refere ao id real da postagem no banco de dados.
 - 3. Em Structure selecione No Body
 - Clique em Send
