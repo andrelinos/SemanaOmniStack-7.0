@@ -42,11 +42,20 @@ section#post-list article footer {
   padding: 20px;
 }
 
+section#post-list article footer .buttons-area {
+  display: flex;
+  justify-content: space-between;
+}
+
 section#post-list article footer .actions {
   margin-bottom: 10px;
 }
 
-section#post-list article footer .actions button {
+section#post-list article footer .actions button,
+section#post-list article footer .book-marker button,
+section#post-list article footer .comment-area .user-comments .like-user-comment button,
+section#post-list article footer .add-comment button
+{
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -57,13 +66,94 @@ section#post-list article footer .actions img {
   margin-right: 10px;
 }
 
-section#post-list article footer p {
+section#post-list article footer .user-likes {
+  width: 100%;
+  display: block;
+  font-weight: 100;
+  padding: 7px;
+}
+
+section#post-list article footer .user-likes a {
+  margin: 0;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #262626;
+}
+
+section#post-list article footer .comment-area {
   font-size: 13px;
   margin-top: 2px;
   line-height: 18px;
 }
 
-section#post-list article footer p span {
-  color: #7159c1;
+section#post-list article footer .comment-area span {
   display: block;
+}
+
+section#post-list article footer .comment-area .user-comments {
+  display: flex;
+  align-items: flex-start;
+}
+
+section#post-list article footer .comment-area .user-comments a {
+  font-weight: bold;
+  margin-right: 8px;
+  text-decoration: none;
+  color: #262626;
+}
+
+section#post-list article footer .comment-area .user-comments p {
+  font-weight: normal;
+}
+
+section#post-list article footer .comment-area .user-comments .like-user-comment {
+  width: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+section#post-list article footer .comment-area .user-comments .like-user-comment img {
+  width: 12px;
+}
+
+section#post-list article footer .comment-area .hash-tags {
+  color: #7159c1;
+}
+
+section#post-list article footer .add-comment {
+  border-top: 1px solid #efefef;
+  border-top: 1px solid rgba(239,239,239);
+  color: #8e8e8e;
+  color: rgba(142,142,142);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 18px;
+  min-height: 56px;
+  display: flex;
+  margin-top: 20px;
+}
+
+section#post-list article footer .add-comment input {
+  width: 100%;
+  border: none;
+  padding: 7px;
+  font-size: 14px;
+}
+
+section#post-list article footer .add-comment button{
+  color: #0095f6;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+section#post-list article footer .add-comment button.disable {
+  opacity: 0.38;
+  cursor: default;
 }

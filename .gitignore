@@ -117,3 +117,9 @@ dist
 # adicionais
 yarn.lock
 package-lock.json
+ressized/*
+
+
+
+
+

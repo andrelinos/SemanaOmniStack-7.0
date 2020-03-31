@@ -1,68 +1,128 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SemanaOmniStack-7.0
 
-## Available Scripts
+## Sobre
+- Layout web com base na página do Instagram
 
-In the project directory, you can run:
+- Utilizando banco de dados [MongoDB](https://www.mongodb.com/)
 
-### `yarn start`
+### Dependências usadadas
+```json
+"dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "socket.io-client": "^2.3.0"
+  },
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  "devDependencies": {
+    "babel-plugin-root-import": "^6.4.1",
+    "customize-cra": "^0.9.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "1.19.1",
+    "react-app-rewired": "^2.1.5"
+  }
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# TODO
+## Visual apenas
+- [x] Interface web
+- [x] Campo pesquisa
+- [x] Nome do usuário
+- [x] Localização
+- [x] Mais opções
+- [x] Postar de fotos
+- [x] Curtir fotos
+- [x] Enviar postagem
+- [x] Salvar favorito
+- [x] Quem curtiu
+- [x] Lista de hashtags
+- [x] Comentários / quem comentou
+- [x] Publicar um comentário
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Home
+Rota: http://localhost:3333/
+- [x] Nome do autor
+- [x] Localização
+- [x] Exibir imagem
+- [x] Número de curtidas
+- [ ] GFM task list 3-1
+- [ ] Acessar página de comentários
+- [ ] Enviar publicação
+- [ ] Adicionar aos favoritos
+- [ ] Curtir comentários
+- [ ] Publicar um comentário
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Enviar nova imagem
+Rota: http://localhost:3333/new
+- [x] Publicar uma nova imagem
+- [x] Autor da imagem
+- [x] Local da imagem (manualmente)
+- [x] Descrição da imagem
+- [x] Hashtags
+- [x] Salvando no banco
 
-### `yarn eject`
+# Como baixar e preparar para o teste
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Clonando para sua máquina
+- Clone o repositório:
+```bash
+  $ git clone git@github.com:andrelinos/SemanaOmniStack-7.0.git
+```
+- Acesse a pasta backdend e frontend, e execute nas duas o comando `yarn`. Aguarde finalizar a instalação dos pacotes.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Executando projeto
+Nota: Para executar os projetos, você precisa estar dentro da pasta do projeto
+- Executando o backend usando o terminal
+```bash
+  yarn dev
+```
+- Executando o frontend usando o terminal
+```bash
+  yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Rotas do insomnia
+### Criar novo post
+- 1. Adiocione uma nova requisição POST
+- 2. Coloque a URL http://localhost:3333/posts
+- 3. Em Structure selecione Multipart Form
+- 4. Adicione os campos
+- - image -> Adicione uma foto
+- - author -> Digite o nome
+- - place -> Digite o local
+- - description -> Digite a descrição
+- - hashtags -> Adicione hashtags (#exemplo)
+- Clique em Send
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Listar Posts
+- 1. Adicione uma nova requisição GET
+- 2. Coloque a URL http://localhost:3333/posts
+- 3. Em Structure selecione No Body
+- Clique em Send
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Dando like nas postagens
+- 1. Adicione uma nova requisição POST
+- 2. Coloque a URL http://localhost:3333/posts/id/like
+   (ex: /posts/5e82a083070c5f571f26cf96/like)
+   
+Nota: O id, se refere ao id real da postagem no banco de dados.
+- 3. Em Structure selecione No Body
+- Clique em Send

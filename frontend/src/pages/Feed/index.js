@@ -9,6 +9,7 @@ import more from '../../assets/more.svg';
 import like from '../../assets/like.svg';
 import comment from '../../assets/comment.svg';
 import send from '../../assets/send.svg';
+import bookmarker from '../../assets/bookmarker.svg';
 
 class Feed extends Component {
   constructor(props) {
@@ -58,20 +59,58 @@ class Feed extends Component {
             <img src={`http://localhost:3333/files/${post.image}`} alt="" />
 
             <footer>
-              <div className="actions">
-                <button type="button" onClick={() => this.handleLike(post._id)}>
-                  <img src={like} alt="" />
-                </button>
-
-                <img src={comment} alt="" />
-                <img src={send} alt="" />
+              <div className="buttons-area">
+                <div className="actions">
+                  <button
+                    type="button"
+                    onClick={() => this.handleLike(post._id)}
+                  >
+                    <img src={like} alt="" />
+                  </button>
+                  <button type="button">
+                    <img src={comment} alt="" />
+                  </button>
+                  <button type="button">
+                    <img src={send} alt="" />
+                  </button>
+                </div>
+                <div className="book-marker">
+                  <button type="button">
+                    <img src={bookmarker} alt="" />
+                  </button>
+                </div>
               </div>
 
-              <strong>{post.likes} curtidas</strong>
-              <p>
-                {post.description}
-                <span>{post.hashtags}</span>
-              </p>
+              <strong>{post.likes} curtidas </strong>
+              <span className="user-likes">
+                Curtido por<a href="#">Andrelino Silva</a>e
+                <a href="#">outros 100k</a>
+              </span>
+              <div className="comment-area">
+                <strong>{post.author}</strong> {post.description}
+                <span className="hash-tags">{post.hashtags}</span>
+                <div className="user-comments">
+                  <span className="user-comment">
+                    <a href="#">Andrelino Silva </a>O cara tá só na vida boa!
+                  </span>
+
+                  <span className="like-user-comment">
+                    <button type="button">
+                      <img src={like} alt="" />
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div className="add-comment">
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Adicione um comentário..."
+                />
+                <button type="button" className="disable">
+                  <span className="post-comment">Publicar</span>
+                </button>
+              </div>
             </footer>
           </article>
         ))}

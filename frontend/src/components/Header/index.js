@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
 import camera from '../../assets/camera.svg';
+import logo from '../../assets/logo.png';
 
 export default function Header() {
   return (
@@ -13,6 +13,13 @@ export default function Header() {
         <Link to="/">
           <img src={logo} alt="InstaRocket" />
         </Link>
+        <input
+          type="search"
+          name=""
+          id=""
+          className="input-search"
+          placeholder="Buscar"
+        />
         <Link to="/new">
           <img src={camera} alt="Enviar publicão" />
         </Link>
