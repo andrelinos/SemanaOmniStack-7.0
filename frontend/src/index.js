@@ -5,7 +5,6 @@ import App from './App';
 
 import './global.css';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
