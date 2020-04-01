@@ -8,14 +8,15 @@ module.exports = {
   async index(req, res) {
     const { page = 1 } = req.query;
 
-    await Post.paginate({}, { offset: (page - 1) * 10, limit: 10 }, function(
-      err,
-      result
-    ) {
-      res.header('X-Total-Count', [result.totalDocs]);
+    await Post.paginate(
+      {},
+      { offset: (page - 1) * 10, limit: 10 },
+      (err, result) => {
+        res.header('X-Total-Count', [result.totalDocs]);
 
-      res.json(result.docs);
-    });
+        res.json(result.docs);
+      }
+    );
   },
 
   async store(req, res) {
