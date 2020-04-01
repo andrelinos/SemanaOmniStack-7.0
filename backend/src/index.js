@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+
 import path from 'path';
 import cors from 'cors';
 
@@ -17,11 +18,7 @@ mongoose.connect(
   }
 );
 
-app.use(
-  cors({
-    /* origin: 'http://meusite.com' */
-  })
-);
+app.use(cors());
 
 app.use((req, res, next) => {
   req.io = io;

@@ -1,15 +1,11 @@
 import React from 'react';
-import { FlatList, View, Text, Image, TouchableOpacity } from 'react-native';
+import { Text } from '@react-navigation/native';
 
-import Header from '../../components/Header';
 
 export default function New() {
-   return (
-    <View>
-      <Header />
+  return (
+    <Container>
       <Text>New</Text>
-
-      </View>
-
+    </Container>
   );
 }

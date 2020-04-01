@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    paddingHorizontal: 24,
-
-  }
-})
+    marginLeft: 0,  
+    marginRight: 0, 
+    marginTop: 0, 
+    marginBottom: 0, 
+}
+}
+);

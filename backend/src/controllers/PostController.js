@@ -6,9 +6,16 @@ import Post from '../models/Post';
 
 module.exports = {
   async index(req, res) {
-    const posts = await Post.find().sort('-createdAt');
+    const { page = 1 } = req.query;
 
-    return res.json(posts);
+    await Post.paginate({}, { offset: (page - 1) * 10, limit: 10 }, function(
+      err,
+      result
+    ) {
+      res.header('X-Total-Count', [result.totalDocs]);
+
+      res.json(result.docs);
+    });
   },
 
   async store(req, res) {
