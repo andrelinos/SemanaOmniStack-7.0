@@ -10,13 +10,19 @@ module.exports = {
 
     await Post.paginate(
       {},
-      { offset: (page - 1) * 10, limit: 10 },
+      {
+        lean: true,
+        sort: { date: 1 },
+        offset: (page - 1) * 10,
+        limit: 10,
+      },
+
       (err, result) => {
         res.header('X-Total-Count', [result.totalDocs]);
 
         res.json(result.docs);
       }
-    );
+    ).sort(-1);
   },
 
   async store(req, res) {
